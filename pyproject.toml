@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "test-python-cache-action"
+name = "test2"
 version = "0.1.0"
 description = ""
 authors = ["ArielSantos01 <arielg.santos21@gmail.com>"]
@@ -10,7 +10,6 @@ python = "^3.12"
 python-dotenv = "^1.0.1"
 django = "^5.0.7"
 djangorestframework = "^3.15.2"
-
 
 [build-system]
 requires = ["poetry-core"]
