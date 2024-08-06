@@ -9,23 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Use python and poetry
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - name: Install poetry
+        run: pipx install poetry
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12.4'
-          cache: 'poetry' 
-
-      - name: Use poetry
-        uses: abatilo/actions-poetry@v2
-        with:
-          poetry-version: '1.8.3'
-
-      - name: Install dependencies
-        run: |
-          poetry install
+          cache: 'poetry'
+      - run: poetry install
 
       - name: Verify cache path
         run: |
